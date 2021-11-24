@@ -26,7 +26,7 @@ function saveContactsToServer() {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log('response: ' + this.responseText);
-            setStatus(this.responseText)
+            //setStatus(this.responseText)
         }
     };
     xmlhttp.open("POST", "save-contacts.php", true);
@@ -42,7 +42,7 @@ function loadContactsFromServer() {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             contactArray = JSON.parse(this.responseText);
-            setStatus("Loaded contacts (" + contactArray.length + ")");
+            //setStatus("Loaded contacts (" + contactArray.length + ")");
             currentContactIndex = 0;
             viewCurrentContact()
         }
