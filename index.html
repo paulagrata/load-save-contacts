@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  paula grata
+    Class:   wdp
+    Project: mustang v3
+    Description: reads json file
+-->
+
+<head>
+    <title>PRG Mustang v3</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="initApplication()">  
+    <h1>mustang v3</h1>  
+
+    <form autocomplete="off" onclick="lookup()">
+        <div class="autocomplete">
+            <input id="myInput" type="search" placeholder="search" ><br><br>
+        </div>
+    </form>
+
+    <button type="button" onclick="newContact()">New</button>   
+    <button type="button" onclick="add()">Add</button>  
+    <button type="button" onclick="remove()">Delete</button>
+
+    <table>
+        <tr><td>Name:</td><td> <input id="nameID" type="text" value="" size="20"></td></tr>
+        <tr><td>Email:</td><td><input id="emailID" type="text" value="" size="20"></td></tr>
+        <tr><td>Zip</td><td> <input id="zipID" type="text" value="" size="20" onfocus="getPlace()" onblur="getPlace()"></td></tr>
+        <tr><td>City:</td><td><input id="cityID" type="text" value="" size="20"></td></tr>
+        <tr><td>State:</td><td><input id="stateID" type="text" value="" size="20"></td></tr>
+    </table>
+
+    <button type="button" onclick="previous()">Previous</button>    
+    <button type="button" onclick="next()">Next</button>  <br>
+    <!-- <button type="button" onclick="importContacts()">Import Contacts</button><br><br>-->
+    <button type="button" onclick="saveContactsToServer()">Save Contacts</button> 
+    <button type="button" onclick="loadContactsFromServer()">Load Contacts</button>
+    <button type="button" onclick="logContacts()">Log Contacts</button>
+    <br><br>
+
+    <p id="statusID"></p>
+
+    <hr>
+    <button onclick="loadIndex()" style="margin-top: 0;">Load index</button><br>
+    index:<p id="indexID"></p>
+
+    <button onclick="loadContacts()"style="margin-top: 0;">Load contacts</button><br>
+    contacts:<p id="contactsID"></p>
+
+    <button onclick="logContacts()"style="margin-top: 0;">Log contacts to console</button>
+    <p id="logID" style="margin-top: 0;"></p>
+    
+    <script src="index.js"></script>
+
+</body>
+</html>
