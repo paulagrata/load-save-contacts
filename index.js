@@ -15,7 +15,7 @@ function setStatus(status) {
 function logContacts() {
     console.log("contact array: ");
     console.log(contactArray);
-    document.getElementById("logID").innerHTML = "contacts logged to console";
+    document.getElementById("logID").innerHTML = "Contacts logged to console";
 }
 
 
