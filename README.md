@@ -1,3 +1,1 @@
-# mustang-prg
-
-load and save contacts
+# load and save contacts
